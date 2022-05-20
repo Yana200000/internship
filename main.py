@@ -1,7 +1,7 @@
 import pandas as pd
-from regional_destinations import reg_des
+from regional_destinations import reg_des #импортируем названия выбранных аэропортов из файла
 
-parquet_file = r"D:\Стажировка Пулково\клики по 48 странам\clicks_par.parquet"
+parquet_file = r"D:\Стажировка Пулково\клики по 48 странам\clicks_par.parquet" 
 data = pd.read_parquet(parquet_file, engine='auto', columns=['origin', 'destination','destination_country1'])
 
 data1 = data[(data['origin'] == 'LED')] #выбираем маршруты из СПБ
